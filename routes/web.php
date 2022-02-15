@@ -18,7 +18,7 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [GamesController::class, 'index'])->name('games.index');
-Route::get('/tickle', [GamesController::class, 'tickle'])->name('games.tickle');
+Route::get('/games/{slug}', [GamesController::class, 'show'])->name('games.show');
 
 
 

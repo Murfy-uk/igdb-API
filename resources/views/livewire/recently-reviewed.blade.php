@@ -7,35 +7,32 @@
     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
         <div class="relative flex-none h-full bg-red-300">
             <!-- add flex-none to the class-->
-
+            <a
+            href="{{ route('games.show', $recent['slug']) }}">
             <img
-                src="{{ Str::replaceFirst('thumb', 'cover_big', $recent['cover']['url']) }}"
+                src="{{ $recent['coverImageUrl'] }}"
                 alt="Game Cover"
                 class="hover:opacity-75 w-48 transition ease-in-out duration-150"
             />
-
+            </a>
             <div
-                class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 opacity-75 rounded-full"
+                id="reviewed_{{ $recent['slug'] }}"
+                class="absolute bottom-0 right-0 w-14 h-14 bg-gray-900 text-xs opacity-90 rounded-full"
                 style="right: -20px; bottom: -20px"
             >
-                <div
-                    class="font-semibold text-xs flex justify-center items-center h-full"
-                >
-                    {{ round($recent['rating']).'%' }}
-                </div>
+
             </div>
         </div>
         <!-- end of the game image -->
 
         <div class="ml-12">
             <a
-                href=""
+                href="{{ route('games.show', $recent['slug']) }}"
                 class="block text-xl font-semibold leading-tight hover:text-gray 400"
                 >{{ $recent["name"] }}</a
             >
             <div class="text-gray-400 mt-1">
-                @foreach($recent['platforms'] as $recentlyPlat)
-                {{ $recentlyPlat["abbreviation"] }} &middot; @endforeach
+                {{ $recent["platforms"] }}
             </div>
             <p class="mt-6 text-xs text-gray-400 hidden lg:block">
                 {{ $recent["summary"] }}
@@ -82,3 +79,11 @@
     </div>
     @endforelse
 </div>
+
+@push('scripts')
+    @include('_rating',
+    [
+        'event' => 'reviewedGameWithRatingAdded'
+
+    ])
+@endpush

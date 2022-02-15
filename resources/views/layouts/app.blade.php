@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="/css/app.css" />
         <title>Game API APP</title>
         <livewire:styles />
+        <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js" defer></script>
+
     </head>
     <body class="container mx-auto bg-gray-900 text-white">
         <header class="border-b border-gray-800">
@@ -45,30 +47,7 @@
                     </ul>
                 </div>
                 <div class="flex items-center mt-6 lg:mt-0">
-                    <div class="relative">
-                        <input
-                            type="text"
-                            name=""
-                            placeholder="search...."
-                            id=""
-                            class="bg-gray-800 text-sm rounded-full focus:shadow-outline pl-8 w-64 px-3 py-1"
-                        />
-                        <div
-                            class="absolute top-0 flex items-center h-full ml-2"
-                        >
-                            <svg
-                                class="fill-current text-gray-400 w-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                x="0px"
-                                y="0px"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"
-                                ></path>
-                            </svg>
-                        </div>
-                    </div>
+                    <livewire:search-dropdown >
                     <div class="ml-6">
                         <a href="#"
                             ><img
@@ -90,5 +69,7 @@
             </div>
         </footer>
         <livewire:scripts>
+        <script src="/js/app.js"></script>
+        @stack('scripts')
     </body>
 </html>

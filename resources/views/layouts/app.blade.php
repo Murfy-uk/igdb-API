@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="/css/app.css" />
         <title>Game API APP</title>
         <livewire:styles />
-        <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js" defer></script>
+        <script src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js" defer></script>
 
     </head>
     <body class="container mx-auto bg-gray-900 text-white">
@@ -68,7 +68,7 @@
                 <a href="#" class="underline hover:text-gray-400">IGDB API</a>
             </div>
         </footer>
-        <livewire:scripts>
+        <livewire:scripts/>
         <script src="/js/app.js"></script>
         @stack('scripts')
     </body>

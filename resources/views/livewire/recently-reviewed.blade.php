@@ -12,7 +12,7 @@
             <img
                 src="{{ $recent['coverImageUrl'] }}"
                 alt="Game Cover"
-                class="hover:opacity-75 sm:w-38 w-48 transition ease-in-out duration-150"
+                class="hover:opacity-75 sm:w-32 m:w-38 w-48 transition ease-in-out duration-150"
             />
             </a>
             <div

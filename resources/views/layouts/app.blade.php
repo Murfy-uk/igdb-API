@@ -52,7 +52,7 @@
                     <div class="ml-6">
                         <a href="#"
                             ><img
-                                src="/avatar.jpg"
+                                src="/IMG_6999.jpg"
                                 alt="user avatar"
                                 class="rounded-full w-8"
                         /></a>

@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/css/app.css" />
         <title>Game API APP</title>
         <livewire:styles />
-        <script src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer>alert('welcome')</script>
 
     </head>
     <body class="container mx-auto bg-gray-900 text-white">

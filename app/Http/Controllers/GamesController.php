@@ -119,7 +119,7 @@ class GamesController extends Controller
                 )
                 ->post('https://api.igdb.com/v4/games')->json();
 
-                // dump($temp);
+                dump($temp);
         return $temp;
         });
 
@@ -152,7 +152,7 @@ class GamesController extends Controller
 
                 ];
             })->take(9) : null,
-            'similarGames' => array_key_exists('similarGames', $game) ? collect($game['similar_games'])->map(function ($game) {
+            'similarGames' => array_key_exists('similar_games', $game) ? collect($game['similar_games'])->map(function ($game) {
                 return collect($game)->merge([
                     'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) : 'https://via.placeholder.com/264x352',
                     'rating' => isset($game['rating']) ? round($game['rating']) : null,

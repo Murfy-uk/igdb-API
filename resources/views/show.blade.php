@@ -148,7 +148,7 @@
                             </div>
                          </div>
                     </template>
-
+                    @if($game['trailer'])
                     <button
                         x-on:click="isTrailerModalVisible = true";
                         class="flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150 items-center"
@@ -156,6 +156,7 @@
                         <i class="far fa-play-circle"></i>
                         <div class="ml-2">Play Trailer</div>
                     </button>
+                    @endif
                 </div>
 
 

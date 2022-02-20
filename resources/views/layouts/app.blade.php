@@ -57,6 +57,9 @@
                                 class="rounded-full w-8"
                         /></a>
                     </div>
+                    <div class="ml-6">
+                      <a href="">Logout</a>
+                    </div>
                 </div>
             </nav>
         </header>

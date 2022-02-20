@@ -1,4 +1,4 @@
-<div class="game mt-8">
+<div class="game mt-8 ">
     <div class="relative inline-block">
         <a href="{{ route('games.show', $game['slug']) }}">
             <img
